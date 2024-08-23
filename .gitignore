@@ -6,6 +6,7 @@
 *.ko
 *.obj
 *.elf
+*.slo
 
 # Linker output
 *.ilk
@@ -17,6 +18,7 @@
 *.pch
 
 # Libraries
+*.lai
 *.lib
 *.a
 *.la
@@ -44,9 +46,26 @@
 
 # Kernel Module Compile Results
 *.mod*
+*.smod
 *.cmd
 .tmp_versions/
 modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# OS and IDE
+*~
+*.bak
+Thumbs.db
+desktop.ini
+.buildpath
+.project
+.settings
+*.tmproj
+git_impact.sh
+cache.properties
+nbproject
+._.DS_Store
+.DS_Store
+.vscode
