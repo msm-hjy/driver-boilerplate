@@ -2,7 +2,7 @@
 
 A code template for kick-starting the development cross platform (Windows and Linux) Driver.
 
-## Getting Started
+## Development
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
@@ -10,34 +10,30 @@ These instructions will get you a copy of the project up and running on your loc
 
 Following are the minimum requirements for the development of this project.
 
-- [Enterprise WDK](https://learn.microsoft.com/en-us/legal/windows/hardware/enterprise-wdk-license-2017) for Windows 10, version 1809 or higher
+- A Windows Machine ( Windows 10, version 1809 or higher ) with [Enterprise WDK](https://learn.microsoft.com/en-us/legal/windows/hardware/enterprise-wdk-license-2017) (2017 or higher) installed
+- Have the `DebugView` tool from SysInternals on the Test Machine
+- On the test machine, turn off Integrity checks and turn on test signing. This can be done by running the following commands from an Admin prompt and then rebooting the system:
 
-### Development
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-
+```shell
+bcdedit.exe -set loadoptions DISABLE_INTEGRITY_CHECKS
+bcdedit.exe -set TESTSIGNING ON
 ```
-Give the example
+
+### Build
+
+To build the driver, simply run:
+
+```shell
+make build
 ```
 
 ### Testing
 
-Following are the minimum requirements for the driver testing.
+To build the tests, just run:
 
-- A Windows Machine (This can be a Virtual Machine)
-- Have the `DebugView` tool from SysInternals on the Test Machine
-- On the test machine, turn off Integrity checks and turn on test signing. This can be done by running the following commands from an Admin prompt and then rebooting the system:
-
+```shell
+make test
 ```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Changelog
 
